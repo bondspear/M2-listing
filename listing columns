@@ -2,7 +2,7 @@
    
 ... 
        
-    <columns name="store_grid_post_columns">
+    <columns name="vendorname_modulename_modelname_columns">
         <column name="id">
             <settings>
                 <filter>textRange</filter>
@@ -17,7 +17,7 @@
                 <label translate="true">author</label>
             </settings>
         </column>
-        <actionsColumn name="actions" class="Store\Grid\Ui\Component\Post\Listing\Column\Actions" sortOrder="200">
+        <actionsColumn name="actions" class="VendorName\ModuleName\Ui\Component\Product\Listing\Column\Actions" sortOrder="200">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="resizeEnabled" xsi:type="boolean">false</item>
