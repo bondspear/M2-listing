@@ -27,14 +27,5 @@
             </settings>
         </dataProvider>
     </dataSource>
-    <columns name="store_grid_post_columns">
-        <column name="id">
-            <settings>
-                <filter>textRange</filter>
-                <label translate="true">ID</label>
-                <resizeDefaultWidth>25</resizeDefaultWidth>
-            </settings>
-        </column>
-    </columns>
 </listing>
 
