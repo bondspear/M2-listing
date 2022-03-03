@@ -1,7 +1,11 @@
 <listing>
    
 ... 
-       
+    <selectionsColumn name="ids" sortOrder="0">
+            <settings>
+                <indexField>id</indexField>
+            </settings>
+     </selectionsColumn>
     <columns name="vendorname_modulename_modelname_columns">
         <column name="id">
             <settings>
