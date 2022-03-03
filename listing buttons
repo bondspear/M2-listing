@@ -1,0 +1,9 @@
+<settings>
+        <buttons>
+            <button name="actionname">
+                <url path="path/to/action"/>
+                <label translate="true">Your button title</label>
+                <class>action-primary</class>
+            </button>
+        </buttons>
+</settings>
