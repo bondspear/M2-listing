@@ -1,0 +1,64 @@
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+declare(strict_types=1);
+
+namespace VendorName\ModuleName\Ui\Component\ModelName;
+
+
+use Magento\Framework\View\Element\UiComponentInterface;
+use Magento\Framework\View\Element\UiComponent\ContextInterface;
+use Magento\Ui\Component\AbstractComponent;
+
+/**
+ * Class MassAction
+ */
+class MassAction extends AbstractComponent
+{
+    const NAME = 'massaction';
+
+    /**
+     * Constructor
+     *
+     * @param ContextInterface $context
+     * @param UiComponentInterface[] $components
+     * @param array $data
+     */
+    public function __construct(
+        ContextInterface $context,
+        array $components = [],
+        array $data = []
+    ) {
+        parent::__construct($context, $components, $data);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function prepare() : void
+    {
+        $config = $this->getConfiguration();
+
+        foreach ($this->getChildComponents() as $actionComponent) {
+                $config['actions'][] = array_merge($actionComponent->getConfiguration(), ['__disableTmpl' => true]);
+        }
+        $origConfig = $this->getConfiguration();
+        if ($origConfig !== $config) {
+            $config = array_replace_recursive($config, $origConfig);
+        }
+
+        $this->setData('config', $config);
+        $this->components = [];
+
+        parent::prepare();
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getComponentName() : string
+    {
+        return static::NAME;
+    }
+}
