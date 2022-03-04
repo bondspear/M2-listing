@@ -20,7 +20,7 @@
             </storageConfig>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <dataProvider class="VendorName\ModuleName\Ui\DataProvider\Listing\DataProvider" name="vendorname_modulename_model_listing_data_source">
+        <dataProvider class="VendorName\ModuleName\Ui\DataProvider\Listing\CollectionDataProvider" name="vendorname_modulename_model_listing_data_source">
             <settings>
                 <requestFieldName>id</requestFieldName>
                 <primaryFieldName>id</primaryFieldName>
