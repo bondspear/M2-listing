@@ -4,7 +4,7 @@ use Magento\Framework\App\RequestInterface;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 use VendorName\ModuleName\Model\ResourceModel\ModelName\CollectionFactory;
 
-class DataProvider extends AbstractDataProvider
+class CollectionDataProvider extends AbstractDataProvider
 {
     /**
      * @var RequestInterface
